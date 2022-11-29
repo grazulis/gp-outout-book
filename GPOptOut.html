@@ -432,19 +432,6 @@ gp_deprivation = gp_deprivation[~gp_deprivation[&quot;Parent Code&quot;].isnull(
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Code to load the data</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -473,7 +460,7 @@ gp_output_data[&#39;Decile rank&#39;] = pd.qcut(gp_output_data[&#39;Value&#39;],
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Value&#39;, ylabel=&#39;Optout Rate&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;Value&#39;, ylabel=&#39;Optout Rate&#39;&gt;
 </pre></div>
 </div>
 <img alt="_images/GPOptOut_5_1.png" src="_images/GPOptOut_5_1.png" />
@@ -490,7 +477,7 @@ gp_output_data[gp_output_data[&quot;Optout Rate&quot;] &lt; 50].plot.scatter(x=&
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Opt-out Rate for deprivation, excluding outlier practices
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Value&#39;, ylabel=&#39;Optout Rate&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;Value&#39;, ylabel=&#39;Optout Rate&#39;&gt;
 </pre></div>
 </div>
 <img alt="_images/GPOptOut_6_2.png" src="_images/GPOptOut_6_2.png" />
@@ -503,7 +490,7 @@ gp_output_data[gp_output_data[&quot;Optout Rate&quot;] &lt; 50].plot.scatter(x=&
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Decile rank&#39;, ylabel=&#39;Optout Rate&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;Decile rank&#39;, ylabel=&#39;Optout Rate&#39;&gt;
 </pre></div>
 </div>
 <img alt="_images/GPOptOut_7_1.png" src="_images/GPOptOut_7_1.png" />
