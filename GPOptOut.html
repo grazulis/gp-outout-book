@@ -376,7 +376,7 @@ title="Print to PDF"
 <h2>Data Sources<a class="headerlink" href="#data-sources" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://digital.nhs.uk/data-and-information/publications/statistical/national-data-opt-out">MI National Data Opt-Out - NHS Digital</a></p>
 <p><a class="reference external" href="https://fingertips.phe.org.uk/profile/general-practice/data#page/0/gid/2000005/pat/167/par/E38000101/ati/7/are/N82054/iid/639/age/28/sex/4/cat/-1/ctp/-1/yrr/1/cid/4/tbm/1">National General Practice Profiles - Data - OHID</a></p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Code to load the data
 import pandas as pd
@@ -422,7 +422,7 @@ gp_deprivation = gp_deprivation[~gp_deprivation[&quot;Parent Code&quot;].isnull(
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>gp_output_data = pd.merge(
     gp_deprivation,
@@ -438,7 +438,7 @@ gp_output_data[&#39;Decile rank&#39;] = pd.qcut(gp_output_data[&#39;Value&#39;],
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>gp_output_data.plot.scatter(x=&quot;Value&quot;, y=&quot;Optout Rate&quot;, alpha = 0.5)
 </pre></div>
@@ -451,7 +451,7 @@ gp_output_data[&#39;Decile rank&#39;] = pd.qcut(gp_output_data[&#39;Value&#39;],
 <img alt="_images/GPOptOut_3_1.png" src="_images/GPOptOut_3_1.png" />
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&quot;Opt-out Rate for deprivation, excluding outlier practices&quot;)
 gp_output_data[gp_output_data[&quot;Optout Rate&quot;] &lt; 50].plot.scatter(x=&quot;Value&quot;, y=&quot;Optout Rate&quot;, alpha = 0.5)
