@@ -334,6 +334,16 @@ title="Print to PDF"
    Data Sources
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loading-the-data">
+   Loading the Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-the-data">
+   Plotting the data
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -358,6 +368,16 @@ title="Print to PDF"
    Data Sources
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loading-the-data">
+   Loading the Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-the-data">
+   Plotting the data
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -376,6 +396,10 @@ title="Print to PDF"
 <h2>Data Sources<a class="headerlink" href="#data-sources" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://digital.nhs.uk/data-and-information/publications/statistical/national-data-opt-out">MI National Data Opt-Out - NHS Digital</a></p>
 <p><a class="reference external" href="https://fingertips.phe.org.uk/profile/general-practice/data#page/0/gid/2000005/pat/167/par/E38000101/ati/7/are/N82054/iid/639/age/28/sex/4/cat/-1/ctp/-1/yrr/1/cid/4/tbm/1">National General Practice Profiles - Data - OHID</a></p>
+</section>
+<section id="loading-the-data">
+<h2>Loading the Data<a class="headerlink" href="#loading-the-data" title="Permalink to this headline">#</a></h2>
+<p>The first step was to load and combine the data sources. The files used can be viewed in the GitHub repository <a class="reference external" href="https://github.com/grazulis/gp-outout-book/tree/main/data">data folder</a></p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Code to load the data
@@ -438,6 +462,10 @@ gp_output_data[&#39;Decile rank&#39;] = pd.qcut(gp_output_data[&#39;Value&#39;],
 </div>
 </div>
 </div>
+</section>
+<section id="plotting-the-data">
+<h2>Plotting the data<a class="headerlink" href="#plotting-the-data" title="Permalink to this headline">#</a></h2>
+<p>The data was plotted. There is an outlier of one practice where the opt out rate is over 80%. For later plots this was excluded.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>gp_output_data.plot.scatter(x=&quot;Value&quot;, y=&quot;Optout Rate&quot;, alpha = 0.5)
@@ -448,7 +476,7 @@ gp_output_data[&#39;Decile rank&#39;] = pd.qcut(gp_output_data[&#39;Value&#39;],
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Value&#39;, ylabel=&#39;Optout Rate&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/GPOptOut_3_1.png" src="_images/GPOptOut_3_1.png" />
+<img alt="_images/GPOptOut_5_1.png" src="_images/GPOptOut_5_1.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -465,7 +493,7 @@ gp_output_data[gp_output_data[&quot;Optout Rate&quot;] &lt; 50].plot.scatter(x=&
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Value&#39;, ylabel=&#39;Optout Rate&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/GPOptOut_4_2.png" src="_images/GPOptOut_4_2.png" />
+<img alt="_images/GPOptOut_6_2.png" src="_images/GPOptOut_6_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -478,7 +506,7 @@ gp_output_data[gp_output_data[&quot;Optout Rate&quot;] &lt; 50].plot.scatter(x=&
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Decile rank&#39;, ylabel=&#39;Optout Rate&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/GPOptOut_5_1.png" src="_images/GPOptOut_5_1.png" />
+<img alt="_images/GPOptOut_7_1.png" src="_images/GPOptOut_7_1.png" />
 </div>
 </div>
 </section>
