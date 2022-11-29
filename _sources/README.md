@@ -1,6 +1,6 @@
 # GP Optout
 
-This is a quick demo using GP Opt Out Data
+This is a quick demo using GP Opt Out Data. It is published at https://grazulis.github.io/gp-outout-book/
 
 ## Usage
 
