@@ -452,7 +452,10 @@ gp_output_data[&#39;Decile rank&#39;] = pd.qcut(gp_output_data[&#39;Value&#39;],
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&quot;Opt-out Rate by GP Practice and deprivation&quot;)
-gp_output_data.plot.scatter(x=&quot;Value&quot;, y=&quot;Optout Rate&quot;, alpha = 0.5)
+
+ax = gp_output_data.plot.scatter(x=&quot;Value&quot;, y=&quot;Optout Rate&quot;, alpha = 0.5)
+ax.set_xlabel(&quot;GP Practice Deprivation&quot;)
+ax.set_ylabel(&quot;Opt Out Rate&quot;);
 </pre></div>
 </div>
 </div>
@@ -460,10 +463,7 @@ gp_output_data.plot.scatter(x=&quot;Value&quot;, y=&quot;Optout Rate&quot;, alph
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Opt-out Rate by GP Practice and deprivation
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;Value&#39;, ylabel=&#39;Optout Rate&#39;&gt;
-</pre></div>
-</div>
-<img alt="_images/GPOptOut_5_2.png" src="_images/GPOptOut_5_2.png" />
+<img alt="_images/GPOptOut_5_1.png" src="_images/GPOptOut_5_1.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -479,6 +479,10 @@ gp_output_nooutlier.insert(6,&#39;Dreg&#39;,f(gp_output_nooutlier[&#39;Value&#39
 
 ax = gp_output_nooutlier.plot.scatter(x=&quot;Value&quot;, y=&quot;Optout Rate&quot;, alpha = 0.5)
 gp_output_nooutlier.plot(x=&#39;Value&#39;,y=&#39;Dreg&#39;,color=&#39;Red&#39;,legend=False,ax=ax)
+ax.set_xlabel(&quot;GP Practice Deprivation&quot;)
+ax.set_ylabel(&quot;Opt Out Rate&quot;);
+
+
 
 </pre></div>
 </div>
@@ -487,16 +491,15 @@ gp_output_nooutlier.plot(x=&#39;Value&#39;,y=&#39;Dreg&#39;,color=&#39;Red&#39;,
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Opt-out Rate by GP Practice and deprivation, excluding outlier practices
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;Value&#39;, ylabel=&#39;Optout Rate&#39;&gt;
-</pre></div>
-</div>
-<img alt="_images/GPOptOut_6_2.png" src="_images/GPOptOut_6_2.png" />
+<img alt="_images/GPOptOut_6_1.png" src="_images/GPOptOut_6_1.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&quot;Opt-out Rate for deprivation, by decile&quot;)
-gp_output_data.plot.scatter(x=&quot;Decile rank&quot;, y=&quot;Optout Rate&quot;, alpha = 0.5)
+ax = gp_output_data.plot.scatter(x=&quot;Decile rank&quot;, y=&quot;Optout Rate&quot;, alpha = 0.5)
+ax.set_xlabel(&quot;GP Practice Deprivation&quot;)
+ax.set_ylabel(&quot;Opt Out Rate&quot;);
 </pre></div>
 </div>
 </div>
@@ -504,10 +507,7 @@ gp_output_data.plot.scatter(x=&quot;Decile rank&quot;, y=&quot;Optout Rate&quot;
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Opt-out Rate for deprivation, by decile
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;Decile rank&#39;, ylabel=&#39;Optout Rate&#39;&gt;
-</pre></div>
-</div>
-<img alt="_images/GPOptOut_7_2.png" src="_images/GPOptOut_7_2.png" />
+<img alt="_images/GPOptOut_7_1.png" src="_images/GPOptOut_7_1.png" />
 </div>
 </div>
 </section>
