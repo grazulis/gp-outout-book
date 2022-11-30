@@ -1,16 +1,9 @@
-# Welcome to your Jupyter Book
+# Civic Data Coop Digital Commons
 
-This is a small sample book to give you a feel for how book content is
-structured.
+## Technology test and prototype
 
 :::{note}
-Here is a note!
+This is a test site
 :::
 
-And here is a code block:
-
-```
-e = mc^2
-```
-
-Check out the content pages bundled with this sample book to see more.
+This is a test of how Jupyter Book might be a useful tool for sharing of data and code for the CDC digital commons. The commons is to be an open data and code sharing concept for supporting the Liverpool City Region civic and SME partners in understanding and using data to improve the lives of the residents of the region.
